@@ -27,7 +27,7 @@ class Mrjones_Final_Exam_20questionstobecomeMillionare
     System.out.println("ERROR: YOU DID NOT SAY PLAY!");
     a = scan.nextLine();
   }
-  
+ 
   
   while (a.equals("PLAY")) {
   
