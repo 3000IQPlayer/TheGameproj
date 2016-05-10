@@ -1,0 +1,439 @@
+import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.ArrayList;
+
+
+
+
+
+public class Gameitself {
+  private String answer;
+  private static int num;
+  private static double prize = 0;
+  private static String nextQuestion; 
+  private static int count;
+
+ 
+  
+ 
+
+
+public static void mainmethod()  {
+Scanner scan = new Scanner(System.in);
+ ArrayList <String> list = new ArrayList <String>();
+   
+  System.out.println("Welcome to 20 Questions to become a Millionare Game!");
+  System.out.println("Type \"PLAY\" to start your questions to have a chance to become a millionare!");
+  String ans; 
+  String a = "";
+  String b = "";
+  int exp = 0;
+  int rep = 0;
+  ans = scan.nextLine();
+  
+  if (ans.toLowerCase().equals("play")){
+    System.out.println(nextQuestion());
+    a = scan.nextLine();
+    
+    if (check(a)){
+    System.out.println ("Correct!");
+    
+    for (int i = 0; i < 20; i++){
+    System.out.println (nextQuestion()+12);
+    rep++;
+    a = scan.nextLine();
+    
+    char uniq1 = 'a';
+    
+    if (i == 20){
+    System.out.println ("Congratulations!");
+    }
+    
+    
+    if (check(a)&&(uniq1== 'a')){
+    System.out.println ("Correct!");
+    rep++;
+    
+    }else if (!check(a)){
+    System.out.println ("WRONG! You lose the game! You're going home with: $"+(1.00*prize));
+    exp++;
+    break;
+    }
+    }
+    }else if (!check(a)){
+    System.out.println ("WRONG! You lose the game! You're going home with: $"+(1.00*prize));
+    }
+  }else{
+     while (!ans.toLowerCase().equals("play")){
+    System.out.println ("Wrong! Type in \"PLAY.\"");
+    ans = scan.nextLine();
+    
+  
+     if ((ans.toLowerCase().equals("play"))){
+    System.out.println(nextQuestion()+40000);
+    a = scan.nextLine();
+    
+  }
+     }
+  }
+  
+ 
+     
+     
+  if (check(a)){
+    System.out.println ("Correct!");
+    for (int i = 0; i < 20; i++){
+    System.out.println (nextQuestion()+10000);
+    a = scan.nextLine();
+    char uniq = 'a';
+    if (check(a)&& uniq == 'b'){
+    System.out.println ("Correct!");
+    System.out.println (nextQuestion()+20000);
+    }else if (!check(a)&&(exp!= 1)){
+    System.out.println ("WRONG! You lose the game! You're going home with: $"+(1.00*prize));
+    break;
+    }
+    }
+    }else if (!check(a)&&(exp!= 1)){
+    System.out.println ("WRONG! You lose the game! You're going home with: $"+(1.00*prize));
+    }
+
+    
+    
+ }
+ 
+
+ public Gameitself(){
+  answer = "";
+  num =0;
+  prize = 0;
+  count = 0;
+  }
+  
+  //Sorry Luke, kind of made my own version of randomizing
+  public static String nextQuestion(){
+    if (num == 0){
+    nextQuestion = "From 2008-2016, what is the last name of our President?";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 1){
+    nextQuestion = "nextQuestion2";
+    count++;
+    return nextQuestion;
+    }else if (num == 2){
+    nextQuestion = "nextQuestion3";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 3){
+    nextQuestion = "nextQuestion4";
+    count++;
+    return nextQuestion;
+    }else if (num == 4){
+    nextQuestion = "nextQuestion5";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 5){
+    nextQuestion = "nextQuestion6";
+    count++;
+    return nextQuestion;
+    }else if (num == 6){
+    nextQuestion = "nextQuestion7";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 7){
+    nextQuestion = "nextQuestion8";
+    count++;
+    return nextQuestion;
+    }else if (num == 8){
+    nextQuestion = "nextQuestion9";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 9){
+    nextQuestion = "nextQuestion10";
+    count++;
+    return nextQuestion;
+    }else if (num == 10){
+    nextQuestion = "nextQuestion11";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 11){
+    nextQuestion = "nextQuestion12";
+    count++;
+    return nextQuestion;
+    }else if (num == 12){
+    nextQuestion = "nextQuestion13";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 13){
+    nextQuestion = "nextQuestion14";
+    count++;
+    return nextQuestion;
+    }else if (num == 14){
+    nextQuestion = "nextQuestion 15";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 15){
+    nextQuestion = "nextQuestion16";
+    count++;
+    return nextQuestion;
+    }else if (num == 16){
+    nextQuestion = "nextQuestion17";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 17){
+    nextQuestion = "nextQuestion18";
+    count++;
+    return nextQuestion;
+    }else if (num == 18){
+    nextQuestion = "nextQuestion19";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 19){
+    nextQuestion = "nextQuestion20";
+    count++;
+    return nextQuestion;
+    }else if (num == 20){
+    nextQuestion = "nextQuestion21";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 21){
+    nextQuestion = "nextQuestion22";
+    count++;
+    return nextQuestion;
+    }else if (num == 22){
+    nextQuestion = "nextQuestion23";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 23){
+    nextQuestion = "nextQuestion24";
+    count++;
+    return nextQuestion;
+    }else if (num == 24){
+    nextQuestion = "nextQuestion25";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 25){
+    nextQuestion = "nextQuestion26";
+    count++;
+    return nextQuestion;
+    }else if (num == 26){
+    nextQuestion = "nextQuestion27";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 27){
+    nextQuestion = "nextQuestion28";
+    count++;
+    return nextQuestion;
+    }else if (num == 28){
+    nextQuestion = "nextQuestion29";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 29){
+    nextQuestion = "nextQuestion30";
+    count++;
+    return nextQuestion;
+    }else if (num == 30){
+    nextQuestion = "nextQiestion31";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 31){
+    nextQuestion = "nextQuestion32";
+    count++;
+    return nextQuestion;
+    }else if (num == 32){
+    nextQuestion = "nextQuestion33";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 33){
+    nextQuestion = "nextQuestion34";
+    count++;
+    return nextQuestion;
+    }else if (num == 34){
+    nextQuestion = "nextQuestion 35";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 35){
+    nextQuestion = "nextQuestion36";
+    count++;
+    return nextQuestion;
+    }else if (num == 36){
+    nextQuestion = "nextQuestion37";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 37){
+    nextQuestion = "nextQuestion38";
+    count++;
+    return nextQuestion;
+    }else if (num == 38){
+    nextQuestion = "nextQuestion39";
+    count+=2;
+    return nextQuestion;
+    }else if (num == 39){
+    nextQuestion = "nextQuestion40";
+    count++;
+    return nextQuestion;
+    }else{
+    return nextQuestion;
+    }
+  }
+  
+  public static void randomize(){
+     num = (int)(Math.random()*2)+count;
+  }
+  
+  
+  //Method that checks if the answer is correct
+  
+  public static boolean check(String ans){
+  //we assign each question a certain number
+  //the first question is num = 1, second -> num = 2
+  //if they get the question right, we return true
+  // we put all the answer in place of "correct".
+    
+    
+    if (ans.toLowerCase().equals("obama")&&(num == 0)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 1)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 2)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 3)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 4)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 5)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 6)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 7)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 8)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 9)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 10)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 11)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 12)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 13)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 14)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 15)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 16)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 17)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 18)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 19)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 20)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 21)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 22)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 23)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 24)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 25)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 26)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 27)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 28)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 29)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 30)){
+    randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 31)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 32)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 33)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 34)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 35)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 36)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 37)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 38)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 39)){
+      randomize();
+    return true;
+    }else if(ans.toLowerCase().equals("correct")&&(num == 40)){
+      randomize();
+    return true;
+    }else
+    return false;
+  }
+  
+  /*
+  public static void nextQuestion(){
+    if (ans.check()){
+    num++;
+    }else{
+    System.out.println ("You lose the game! You're going home with: "+prize);
+    }
+  }
+  */
+  
+  public String toString(){
+    if (check(answer)){
+    return "ok";
+    }
+    return "no";
+  }
+}
