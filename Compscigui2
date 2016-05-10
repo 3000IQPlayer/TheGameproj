@@ -1,0 +1,146 @@
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.SpringLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JTextField;
+
+public class CompsciGuiforGame {
+
+ private JFrame frmProjectTest;
+ private JTextField textField;
+ 
+
+
+ /**
+  * Launch the application.
+  */
+ public static void main(String[] args) {
+  EventQueue.invokeLater(new Runnable() {
+   public void run() {
+    try {
+     CompsciGuiforGame window = new CompsciGuiforGame();
+     window.frmProjectTest.setVisible(true);
+     String a;
+              
+    } catch (Exception e) {
+     e.printStackTrace();
+    }
+   
+    
+   }
+  });
+ }
+ 
+
+ /**
+  * Create the application.
+  */
+ public  CompsciGuiforGame() {
+  initialize();
+  
+ }
+
+ /**
+  * Initialize the contents of the frame.
+  */
+ private void initialize() {
+  // Below sets the Jframe's Settings. 
+  frmProjectTest = new JFrame();
+  frmProjectTest.setTitle("Game ");
+  frmProjectTest.setBounds(100, 100, 450, 300);
+  frmProjectTest.setSize(450, 450);
+  frmProjectTest.setResizable(false);
+  frmProjectTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  JButton btnExit = new JButton("Exit");
+  btnExit.setForeground(new Color(255, 0, 0));
+  
+  // Makes btnExit perform an Action and in this case it makes it exit the program. 
+ 
+  
+ 
+
+  
+  
+  
+  
+  
+  SpringLayout springLayout = new SpringLayout();
+  frmProjectTest.getContentPane().setLayout(springLayout);
+  
+  // Below adds a jButton named btnStart. 
+
+ 
+
+  
+  
+  
+  
+  textField = new JTextField();
+  springLayout.putConstraint(SpringLayout.SOUTH, textField, -288, SpringLayout.SOUTH, frmProjectTest.getContentPane());
+  springLayout.putConstraint(SpringLayout.WEST, textField, 155, SpringLayout.WEST, frmProjectTest.getContentPane());
+  springLayout.putConstraint(SpringLayout.EAST, textField, -155, SpringLayout.EAST, frmProjectTest.getContentPane());
+  textField.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent e) {
+    
+    String textt = textField.getText();
+   }
+  });
+  frmProjectTest.getContentPane().add(textField);
+  textField.setColumns(10);
+  
+  final JLabel lblWelcomeTo = new JLabel("Welcome to 20 Question millionare Game! ");
+  lblWelcomeTo.setFont (lblWelcomeTo.getFont ().deriveFont (15.0f));
+  springLayout.putConstraint(SpringLayout.NORTH, lblWelcomeTo, 32, SpringLayout.NORTH, frmProjectTest.getContentPane());
+  springLayout.putConstraint(SpringLayout.WEST, lblWelcomeTo, 46, SpringLayout.WEST, frmProjectTest.getContentPane());
+  frmProjectTest.getContentPane().add(lblWelcomeTo);
+  
+  JLabel lblNewLabel = new JLabel("Name:");
+  springLayout.putConstraint(SpringLayout.NORTH, lblNewLabel, 3, SpringLayout.NORTH, textField);
+  springLayout.putConstraint(SpringLayout.WEST, lblNewLabel, -48, SpringLayout.WEST, textField);
+  springLayout.putConstraint(SpringLayout.EAST, lblNewLabel, -6, SpringLayout.WEST, textField);
+  frmProjectTest.getContentPane().add(lblNewLabel);
+  
+  final JButton btnStartGame = new JButton("Start Game");
+  btnStartGame.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent e) {
+    String textt = textField.getText();
+ frmProjectTest.setVisible(false);
+ System.out.println("Welcome to the 20 question millionare game: " + textt);
+ Gameitself.mainmethod();
+
+ 
+    
+   }
+  });
+  springLayout.putConstraint(SpringLayout.NORTH, btnStartGame, 0, SpringLayout.NORTH, textField);
+  springLayout.putConstraint(SpringLayout.WEST, btnStartGame, 18, SpringLayout.EAST, textField);
+  springLayout.putConstraint(SpringLayout.SOUTH, btnStartGame, 0, SpringLayout.SOUTH, textField);
+  springLayout.putConstraint(SpringLayout.EAST, btnStartGame, -39, SpringLayout.EAST, frmProjectTest.getContentPane());
+  frmProjectTest.getContentPane().add(btnStartGame);
+  
+  JButton btnExitProgram = new JButton("Exit Game");
+  springLayout.putConstraint(SpringLayout.WEST, btnExitProgram, 307, SpringLayout.WEST, frmProjectTest.getContentPane());
+  springLayout.putConstraint(SpringLayout.SOUTH, btnExitProgram, 125, SpringLayout.SOUTH, lblWelcomeTo);
+  springLayout.putConstraint(SpringLayout.NORTH, btnExitProgram, 105, SpringLayout.SOUTH, lblWelcomeTo);
+  springLayout.putConstraint(SpringLayout.EAST, btnExitProgram, 0, SpringLayout.EAST, btnStartGame);
+  btnExitProgram.addActionListener(new ActionListener() {
+   public void actionPerformed(ActionEvent arg0) {
+    
+     System.exit(0);
+   }
+  });
+  btnExitProgram.setForeground(Color.RED);
+  frmProjectTest.getContentPane().add(btnExitProgram);
+  
+  
+  
+  // This adds a actionListner, so when You click the btnStart it performs an action.
+  // 
+ 
+  
+ }
+}
