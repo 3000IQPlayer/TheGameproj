@@ -1,0 +1,44 @@
+public class Student
+
+{
+  private String firstName;
+  private String lastName;
+  private int gradeLvl;
+  private double gpa;
+  private int studentID;
+  private static int num;
+  
+  public Student()
+  {
+    this("None","None",0,0.0);
+  }
+  
+  public Student(String fn, String ln, int gl, double g) 
+  {
+    firstName=fn;
+    lastName=ln;
+    gpa = g;
+    
+    if(gl>=0 &&gl<=12)
+    {
+      gradeLvl=gl;
+    }else
+      gradeLvl=0;
+    
+    if(gpa>=0.0 && gpa<=4.5)
+    {
+      gpa=g;
+    }else
+      gpa= 0.0;
+    
+    num++;
+    studentID=num;
+  }
+  
+  public String toString()
+  {
+    return(lastName+", "+firstName+"\nGPA: "+gpa+"\nGrade Level: "+gradeLvl+" id # "+studentID);
+  }
+  
+  
+}
